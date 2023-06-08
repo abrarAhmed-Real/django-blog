@@ -1,0 +1,23 @@
+{% extends "posts/base.html" %}
+
+{% block content %}
+<h1>Data</h1>
+
+{% for d in data %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ d.author }}</a>
+      <small class="text-muted">{{ d.date_posted }}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+    <p class="article-content">{{ d.content }}</p>
+  </div>
+</article>
+ 
+{% endfor %}
+
+{% endblock content %}
+
+
+
